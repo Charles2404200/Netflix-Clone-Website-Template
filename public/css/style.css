@@ -1,0 +1,196 @@
+/* Netflix-style navigation bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #f40612;
+}
+
+/* Full-screen banner for featured movie */
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.banner h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.banner_buttons {
+    margin-top: 20px;
+}
+
+.banner_button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(51, 51, 51, 0.7);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.banner_button:hover {
+    background-color: #f40612;
+}
+
+.banner_fadeBottom {
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.61), #111);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal_content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styles */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f40612;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner_button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    header nav a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner_button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+/* Swiper container */
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  /* Swiper slide */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  /* Swiper navigation buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: white;
+  }

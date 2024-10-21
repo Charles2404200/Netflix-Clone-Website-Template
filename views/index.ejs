@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- Swiper CSS -->
+    <title>Netflix Clone</title>
+</head>
+<body>
+
+<%- include('partials/header') %>
+
+<!-- Full-screen banner -->
+<div class="banner" style="background-image: url('https://i.imgur.com/nd75o3d.jpg');">
+    <div class="banner_contents">
+        <h1>Featured Movie</h1>
+        <div class="banner_buttons">
+            <button class="banner_button">Play</button>
+            <button class="banner_button">More Info</button>
+        </div>
+    </div>
+    <div class="banner_fadeBottom"></div>
+</div>
+
+<!-- Movie row (carousel) -->
+<div class="swiper-container">
+    <h2>Popular on Netflix</h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="https://resizing.flixster.com/DPxL1sG2snpcMbqGJc67YGTrjlM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JmZTdkNDA5LTA5NzktNGE3OC04ODE2LTJlOTBkYTA3MDY2NS5qcGc=" alt="Movie 1" />
+        </div>
+        <div class="swiper-slide">
+            <img src="https://m.media-amazon.com/images/M/MV5BZGZmOTZjNzUtOTE4OS00OGM3LWJiNGEtZjk4Yzg2M2Q1YzYxXkEyXkFqcGc@._V1_.jpg" alt="Movie 2" />
+        </div>
+        <div class="swiper-slide">
+            <img src="https://m.media-amazon.com/images/M/MV5BN2FjNWExYzEtY2YzOC00YjNlLTllMTQtNmIwM2Q1YzBhOWM1XkEyXkFqcGc@._V1_.jpg" alt="Movie 3" />
+        </div>
+        <div class="swiper-slide">
+            <img src="https://resizing.flixster.com/t03J-N7iMiWdgqbkRNHNArjDD44=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzcxY2M3ZWE3LTc3Y2ItNDExMS1hNzhkLWJhYTljMzZiZmVkNC53ZWJw" alt="Movie 4" />
+        </div>
+        <!-- Add more movie slides as needed -->
+    </div>
+
+    <!-- Pagination and Navigation Controls -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<%- include('partials/footer') %>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Swiper JS -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            }
+        }
+    });
+</script>
+</body>
+</html>
